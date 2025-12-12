@@ -170,3 +170,9 @@ transition: transform 0.2s ease;
 .btn-disable:hover{
  background: gainsboro;
 }
+.cartItem{
+width: 100%;
+display: flex;
+align-items: center;
+gap:50px;
+}

@@ -1,17 +1,23 @@
-import { useDispatch } from "react-redux"
-import { clearItem } from "./redux/slice.js"
-import Header from "./Header"
-import Product from "./Product"
+
+import Header from "./Header.jsx"
+import Product from "./Product.jsx"
 import './app.css'
+import { BrowserRouter, Route, Routes } from "react-router-dom"
+import Cart from "./Cart.jsx"
 
 function App() {
-  const dispatch=useDispatch()
 
   return (
     <>
     <Header />
-    <button onClick={()=>dispatch(clearItem())} className="add-cart-btn btn">Clear cart</button>
-     <Product /> 
+    <BrowserRouter>
+     <Routes>
+       <Route path='/' element={<Product />} />
+       <Route path='/cart' element={<Cart />} />
+
+      </Routes>
+    </BrowserRouter>
+     
     </>
   )
 }
