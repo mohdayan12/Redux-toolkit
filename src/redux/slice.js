@@ -20,7 +20,7 @@ const addToCart=createSlice({
         
      },
     clearItem:(state)=>{
-        state.value=0
+        state.items=[]
      }   
    }
 })
